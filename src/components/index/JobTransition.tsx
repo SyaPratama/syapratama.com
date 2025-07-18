@@ -1,28 +1,31 @@
 import gsap from "gsap";
 import SplitText from "gsap/SplitText";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 function JobTransition() {
-  const textRef = useRef(null);
+  const textRef = useRef<HTMLDivElement>(null);
   const [textIndex, setTextIndex] = useState(0);
-  const textList = [
-    "Software-Enginer",
-    "Game-Developer",
-    "Iot-Developer",
-    "Tech-Enthusiast",
-    "Laravel-Lovers",
-    "FullStack Developer",
-  ];
+  const textList = useMemo(
+    () => [
+      "Software-Enginer",
+      "Game-Developer",
+      "Iot-Developer",
+      "Tech-Enthusiast",
+      "Laravel-Lovers",
+      "FullStack Developer",
+    ],
+    []
+  );
 
   useEffect(() => {
     gsap.registerPlugin(SplitText);
-    const textDOM: any = textRef.current;
+    const textDOM = textRef.current;
     if (!textDOM) return;
     const intervalId = setInterval(() => {
       textDOM.innerHTML = textList[textIndex];
       gsap.set(textDOM, { opacity: 1 });
 
-      let split = new SplitText(textDOM, { type: "chars" });
+      const split = new SplitText(textDOM, { type: "chars" });
       gsap.from(split.chars, {
         y: 20,
         autoAlpha: 0,
@@ -34,7 +37,7 @@ function JobTransition() {
     }, 3000);
 
     return () => clearInterval(intervalId);
-  }, [textIndex]);
+  }, [textList, textIndex]);
   return (
     <>
       <span

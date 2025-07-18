@@ -7,7 +7,7 @@ function TextName() {
 
   useEffect(() => {
     gsap.registerPlugin(SplitText);
-    const textDOM: any = textRef.current;
+    const textDOM = textRef.current;
 
     const MAX_DISTANCE = 50;
     const MAX_FONT_WEIGHT = 300;
@@ -18,7 +18,7 @@ function TextName() {
       const mouseX = event.pageX;
       const mouseY = event.pageY;
 
-      fontWeightItems.forEach((char: any) => {
+      fontWeightItems.forEach((char) => {
         const itemRect = char.getBoundingClientRect();
         const itemCenterX = itemRect.left + itemRect.width / 2 + window.scrollX;
         const itemCenterY = itemRect.top + itemRect.height / 2 + window.scrollY;
@@ -27,7 +27,7 @@ function TextName() {
           Math.pow(mouseX - itemCenterX, 2) + Math.pow(mouseY - itemCenterY, 2)
         );
 
-        let fontWeight =
+        const fontWeight =
           distance < MAX_DISTANCE
             ? gsap.utils.mapRange(
                 0,
