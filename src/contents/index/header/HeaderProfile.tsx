@@ -1,9 +1,7 @@
 import Button from "@/components/index/Button";
 import JobTransition from "@/components/index/JobTransition";
+import TechStack from "@/components/index/TechStack";
 import TextName from "@/components/index/TextName";
-import { FaLaravel, FaGithub } from "react-icons/fa6";
-import { VscVscode } from "react-icons/vsc";
-import { SiNextdotjs, SiTypescript, SiReact, SiFigma } from "react-icons/si";
 
 function HeaderProfile() {
   return (
@@ -11,7 +9,7 @@ function HeaderProfile() {
       <div className="relative z-10">
         <div className="text-slate-200 mt-3 mb-12">
           <div className=" gap-2 lg:gap-3 inline-flex items-center font-bold">
-            <span className="text-[2.5rem] lg:text-7xl">I'm</span>
+            <span className="text-[2.5rem] lg:text-7xl">I&apos;m</span>
             <div className="w-9 h-9 rounded-sm lg:w-14 lg:h-14 bg-red-300 mt-2 lg:rounded-xl"></div>
             <TextName />
           </div>
@@ -28,17 +26,7 @@ function HeaderProfile() {
           </div>
         </div>
         <div className="text-xs lg:text-md text-slate-400">
-          <span className="block mb-4">Current favorite tech stack & tools</span>
-          <div className="inline-flex items-center gap-3 text-lg lg:text-2xl">
-            <FaLaravel/>
-            <SiNextdotjs/>
-            <SiTypescript/>
-            <SiReact/>
-            <span className="w-[0.5px] h-3 bg-slate-400/50"></span>
-            <VscVscode/>
-            <FaGithub/>
-            <SiFigma/>
-          </div>
+          <TechStack />
         </div>
       </div>
     </>
