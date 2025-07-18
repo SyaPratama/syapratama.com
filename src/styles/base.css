@@ -1,0 +1,91 @@
+@layer components {
+  .content-wrapper {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .background-grid {
+    @apply relative -z-10 bg-white dark:bg-slate-950;
+  }
+
+  .background-grid::before {
+    content: "";
+    @apply absolute inset-0;
+    background-size: 40px 40px;
+    @apply [background-image:linear-gradient(to_right,#2a355359_1px,transparent_1px),linear-gradient(to_bottom,#2a355359_1px,transparent_1px)];
+    @apply dark:[background-image:linear-gradient(to_right,#000000_1px,transparent_1px),linear-gradient(to_bottom,#000000_1px,transparent_1px)];
+  }
+
+  .background-grid-fade-out::before {
+    @apply pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_top,transparent,black)] dark:bg-slate-950;
+  }
+
+  .card-wrapper {
+    position: relative;
+  }
+
+  .card-path {
+    @apply bg-slate-800/50;
+    width: 300px;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    clip-path: path(
+      "M 30,0 L265,0 A5,5 0,0,1 270,5 A25,25 0,0,0 295,30 A5,5 0,0,1 300,35 L300,360 A30,30 0,0,1 270,390 L80,390 A40,30 0,0,1 40,360 L40,230 A40,40 0,0,0 20,200 A40,40 0,0,1 0,170 L0,30 A30,30 0,0,1 30,0 Z"
+    );
+  }
+
+  .card-wrapper::after {
+    position: absolute;
+    top: -1.2rem;
+    right: -1.2rem;
+    content: "";
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    @apply bg-slate-800/50;
+  }
+
+  .card-icon {
+    position: absolute;
+    bottom: 2.4rem;
+    left: -0.7rem;
+  }
+
+  .card-icon span {
+    content: "";
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    @apply bg-slate-800/50;
+  }
+
+  .text-name {
+    position: relative;
+  }
+
+  .text-name::after {
+    pointer-events: none;
+    position: absolute;
+    right: -1rem;
+    bottom: -2.5rem;
+    content: url("/assets/cursor.svg");
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@theme {
+  --cursor-custom: url("/assets/cursor.svg"), default;
+}
