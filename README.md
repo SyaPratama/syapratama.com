@@ -99,8 +99,5 @@ This is the source code for my personal website and portfolio, built with **Next
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the GPL 3.0 License.
 
----
-
-Jika ingin langsung menuliskannya ke file README.md, silakan konfirmasi atau minta saya untuk menulisnya secara otomatis.
