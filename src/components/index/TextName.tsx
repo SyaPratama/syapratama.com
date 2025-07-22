@@ -55,7 +55,7 @@ function TextName() {
     <>
       <span
         ref={textRef}
-        className="text-3xl lg:text-7xl bg-purple-700 p-2 rounded-md lg:px-3 lg:py-4 lg:rounded-xl text-name cursor-custom"
+        className="bg-purple-700 p-2 rounded-md lg:px-3 lg:py-4 lg:rounded-xl text-name cursor-custom"
       >
         RasyaPratama
       </span>
