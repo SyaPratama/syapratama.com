@@ -34,10 +34,10 @@ function Quote() {
   }, []);
 
   return (
-    <section id="textSection" className="w-full h-screen bg-slate-950">
+    <section id="textSection" className="w-full h-screen bg-slate-50 dark:bg-slate-950">
       <div className="flex h-full px-2 lg:px-46 justify-center items-center ">
         <h1 ref={textRef} className="text-3xl lg:text-6xl text-slate-600/50 text-center font-bold">
-          Extraordinary development, will produce a extraordinary result.
+          Extraordinary development, will produce a extraordinary result
         </h1>
       </div>
     </section>

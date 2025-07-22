@@ -8,9 +8,9 @@ function HeaderProfile() {
     <>
       <div className="relative z-10">
         <div className="text-slate-200 mt-3 mb-12">
-          <div className=" gap-2 lg:gap-3 inline-flex items-center font-bold">
-            <span className="text-[2.5rem] lg:text-7xl">I&apos;m</span>
-            <div className="w-9 h-9 rounded-sm lg:w-14 lg:h-14 bg-red-300 mt-2 lg:rounded-xl"></div>
+          <div className="text-3xl md:text-7xl gap-2 lg:gap-3 inline-flex items-center font-bold">
+            <span>I&apos;m</span>
+            <div className="w-6 h-6 rounded-sm lg:w-14 lg:h-14 bg-red-300 mt-2 lg:rounded-xl"></div>
             <TextName />
           </div>
         </div>

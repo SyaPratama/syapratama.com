@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
       "gsap",
       "babel-plugin-react-compiler",
       "react-icons",
+      "next-seo",
     ],
   },
 

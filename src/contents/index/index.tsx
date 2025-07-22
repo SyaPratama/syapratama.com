@@ -1,3 +1,4 @@
+import Carousel from "./carousel";
 import Header from "./header";
 import Quote from "./quote";
 
@@ -6,6 +7,7 @@ function IndexContents(){
         <>
             <Header/>
             <Quote/>
+            <Carousel/>
         </>
     );
 }

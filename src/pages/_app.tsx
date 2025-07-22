@@ -8,23 +8,21 @@ import "@/styles/global.css";
 function Root({ Component, pageProps }: AppProps) {
   const seoConfig = getDefaultSeoConfig();
   return (
-    <>
-      <html suppressHydrationWarning>
-        <DefaultSeo {...seoConfig} />
-        <body>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
-          </ThemeProvider>
-        </body>
-      </html>
-    </>
+    <html suppressHydrationWarning={true}>
+      <DefaultSeo {...seoConfig} />
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
 
