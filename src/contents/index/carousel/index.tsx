@@ -63,7 +63,7 @@ function Carousel() {
   }, []);
 
   return (
-    <section className="w-full overflow-x-hidden py-32 carousel-section bg-slate-50 dark:bg-slate-950">
+    <section className="w-full background-grid background-grid-fade-in overflow-x-hidden pt-44 pb-48 carousel-section bg-slate-50 dark:bg-slate-950">
       <div className="relative flex w-full flex-col gap-y-6 [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
         <div
           className={`w-fit flex flex-row gap-x-[25px] justify-center items-center`}
