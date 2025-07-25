@@ -23,6 +23,10 @@
     @apply pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_top,transparent,black)] dark:bg-slate-950;
   }
 
+   .background-grid-fade-in::before {
+    @apply pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black)] dark:bg-slate-950;
+  }
+
   .card-wrapper {
     position: relative;
   }
