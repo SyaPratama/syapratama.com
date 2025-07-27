@@ -1,3 +1,6 @@
+"use client";
+
+
 import gsap from "gsap";
 import SplitText from "gsap/SplitText";
 import { useEffect, useMemo, useRef, useState } from "react";

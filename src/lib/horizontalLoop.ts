@@ -6,7 +6,7 @@ export default function HorizontalLoop(
 ) {
   const elements: HTMLElement[] = gsap.utils.toArray(items) as HTMLElement[];
   config = config;
-  let tl = gsap.timeline({
+  const tl = gsap.timeline({
     repeat: config.repeat,
     paused: config.paused,
     defaults: config.defaults || { ease: "none" },
@@ -14,18 +14,18 @@ export default function HorizontalLoop(
       tl.totalTime(tl.rawTime() + tl.duration() * 100);
     },
   });
-  let length: number = elements.length,
-    startX: number = elements[0]?.offsetLeft ?? 0,
-    times: Array<number> = [],
-    widths: Array<number> = [],
-    xPercents: Array<number> = [],
-    curIndex: number = 0,
-    pixelsPerSecond: number = (config.speed || 1) * 100,
-    snap: (v: number) => number =
-      config.snap === false
-        ? (v: number): number => v
-        : gsap.utils.snap(config.snap || 1),
-    totalWidth: number = 0,
+  const length: number = elements.length;
+  const startX: number = elements[0]?.offsetLeft ?? 0;
+  const times: Array<number> = [];
+  const widths: Array<number> = [];
+  const xPercents: Array<number> = [];
+  const pixelsPerSecond: number = (config.speed || 1) * 100;
+  const snap: (v: number) => number =
+    config.snap === false
+      ? (v: number): number => v
+      : gsap.utils.snap(config.snap || 1);
+  let curIndex: number = 0;
+  let totalWidth: number = 0,
     curX: number = 0,
     distanceToStart: number = 0,
     distanceToLoop: number = 0,
@@ -34,7 +34,7 @@ export default function HorizontalLoop(
 
   gsap.set(elements, {
     xPercent: (i: number, el: HTMLElement): number => {
-      let w = (widths[i] = parseFloat(
+      const w = (widths[i] = parseFloat(
         String(gsap.getProperty(el, "width", "px"))
       ));
       xPercents[i] =
@@ -90,9 +90,7 @@ export default function HorizontalLoop(
 
   function toIndex(index: number, vars: GSAPTimelineVars = {}) {
     vars = vars || {};
-    Math.abs(index - curIndex) > length / 2 &&
-      (index += index > curIndex ? -length : length);
-    let newIndex = gsap.utils.wrap(0, length, index);
+    const newIndex = gsap.utils.wrap(0, length, index);
     let time = times[newIndex];
     if (time > tl.time() !== index > curIndex) {
       vars.modifiers = { time: gsap.utils.wrap(0, tl.duration()) };
@@ -110,18 +108,18 @@ export default function HorizontalLoop(
   tl.previous = (vars: GSAPTimelineVars) => {
     return toIndex(curIndex - 1, vars);
   };
-  
+
   tl.current = () => {
     return curIndex;
   };
 
-  tl.toIndex = ( index: number, vars: GSAPTimelineVars = {} ) => {
+  tl.toIndex = (index: number, vars: GSAPTimelineVars = {}) => {
     return toIndex(index, vars);
   };
 
   tl.times = times;
-  tl.progress(1,true).progress(0, true); 
-  if(config.reversed){
+  tl.progress(1, true).progress(0, true);
+  if (config.reversed) {
     if (typeof tl.vars.onReverseComplete === "function") {
       tl.vars.onReverseComplete();
     }

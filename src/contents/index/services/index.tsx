@@ -1,4 +1,4 @@
-import ServiceCard from "@/components/index/ServiceCard";
+import Card from "./Card";
 
 function Services() {
   return (
@@ -6,12 +6,7 @@ function Services() {
       <div className="content-wrapper">
         <div className="relative z-40">
           <h2 className="text-4xl font-bold">Services</h2>
-          <div className="w-full py-12 inline-grid grid-cols-4 gap-8">
-            <ServiceCard />
-            <ServiceCard />
-            <ServiceCard />
-            <ServiceCard />
-          </div>
+          <Card/>
         </div>
       </div>
     </section>

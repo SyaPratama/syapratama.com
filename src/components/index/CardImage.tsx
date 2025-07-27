@@ -1,3 +1,5 @@
+"use client";
+
 function CardImage() {
   return (
     <div className="card-wrapper hidden lg:block absolute top-40 right-26">

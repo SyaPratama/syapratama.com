@@ -1,3 +1,5 @@
+"use client";
+
 import { PropsWithChildren, ReactNode } from "react";
 
 interface CardTestimonialProps {

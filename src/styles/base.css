@@ -23,7 +23,7 @@
     @apply pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_top,transparent,black)] dark:bg-slate-950;
   }
 
-   .background-grid-fade-in::before {
+  .background-grid-fade-in::before {
     @apply pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black)] dark:bg-slate-950;
   }
 
@@ -79,6 +79,9 @@
     content: url("/assets/cursor.svg");
   }
 
+  .icon-hover {
+    @apply hover:text-slate-100/80 transition ease-in-out duration-300;
+  }
 }
 
 @media screen and (max-width: 768px) {
