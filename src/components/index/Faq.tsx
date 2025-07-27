@@ -6,10 +6,9 @@ import { IoIosArrowDown } from "react-icons/io";
 interface FaqProps {
   question: string;
   answer: string;
-  id: number;
 }
 
-function Faq({ question, answer, id }: FaqProps) {
+function Faq({ question, answer }: FaqProps) {
   const [isExpand,setIsExpand] = useState(false);
   const RefDiv = useRef<HTMLDivElement>(null);
 

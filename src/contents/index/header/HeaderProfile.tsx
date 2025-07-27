@@ -1,7 +1,6 @@
 import ButtonHire from "@/components/index/ButtonHire";
 import ButtonResume from "@/components/index/ButtonResume";
 import JobTransition from "@/components/index/JobTransition";
-import TechStack from "@/components/index/TechStack";
 import TextName from "@/components/index/TextName";
 
 function HeaderProfile() {
@@ -28,7 +27,7 @@ function HeaderProfile() {
           </div>
         </div>
         <div className="text-xs lg:text-md text-slate-400">
-          <TechStack />
+          {/* <TechStack /> */}
         </div>
       </div>
     </>
