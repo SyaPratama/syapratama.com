@@ -1,4 +1,5 @@
-import Button from "@/components/index/Button";
+import ButtonHire from "@/components/index/ButtonHire";
+import ButtonResume from "@/components/index/ButtonResume";
 import JobTransition from "@/components/index/JobTransition";
 import TechStack from "@/components/index/TechStack";
 import TextName from "@/components/index/TextName";
@@ -22,7 +23,8 @@ function HeaderProfile() {
         </div>
         <div className="relative z- mb-12">
           <div className="inline-flex text-sm lg:text-lg gap-4">
-            <Button />
+            <ButtonHire/>
+            <ButtonResume/>
           </div>
         </div>
         <div className="text-xs lg:text-md text-slate-400">
