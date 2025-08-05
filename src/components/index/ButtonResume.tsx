@@ -47,7 +47,7 @@ function ButtonResume() {
         className="inline-flex items-center opacity-70 text-purple-500 pointer-events-none transition ease-in-out font-semibold gap-3 cursor-custom"
       >
         <div className="indicator bg-purple-500"></div>
-        I'm Ready To Hire...
+        I&rsquo;m Ready To Hire...
       </button>
       <button
         id="Resume"
