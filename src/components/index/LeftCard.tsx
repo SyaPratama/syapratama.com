@@ -1,3 +1,6 @@
+"use client";
+
+
 import CardTestimonial from "@/components/index/CardTestimonial";
 import { testimonials } from "@/data/dummy/testimonial";
 
@@ -25,7 +28,7 @@ export default function LeftCard() {
                 </span>
               </div>
             </div>
-            <div className="text-sm font-regular text-slate-200">
+            <div className="text-xs md:text-sm font-regular text-slate-200">
               {v.testimonial}
             </div>
           </CardTestimonial>

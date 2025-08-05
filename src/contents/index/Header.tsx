@@ -1,5 +1,5 @@
 import CardImage from "@/components/index/CardImage";
-import HeaderProfile from "./HeaderProfile";
+import HeaderProfile from "./layout/HeaderProfile";
 
 function Header() {
   return (
