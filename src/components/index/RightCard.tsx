@@ -1,3 +1,6 @@
+"use client";
+
+
 import CardTestimonial from "@/components/index/CardTestimonial";
 import { testimonials } from "@/data/dummy/testimonial";
 

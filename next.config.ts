@@ -11,8 +11,7 @@ const nextConfig: NextConfig = {
       "react-icons",
       "next-seo",
     ],
-  },
-
-};
+  }
+};  
 
 export default nextConfig;

@@ -1,5 +1,5 @@
-import Copyright from "./Copyright";
-import Social from "./Social";
+import Copyright from "../../components/index/Copyright";
+import Social from "./layout/Social";
 
 function Footer() {
   return (

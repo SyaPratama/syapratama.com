@@ -1,4 +1,4 @@
-import Banner from "./Banner";
+import Banner from "../../components/index/Banner";
 
 function BannerGradient() {
   return (

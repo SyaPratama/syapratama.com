@@ -82,6 +82,41 @@
   .icon-hover {
     @apply hover:text-slate-100/80 transition ease-in-out duration-300;
   }
+
+  .indicator {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .indicator::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: rgba(172, 70, 255, 0.5);
+    border-radius: 50%;
+    animation: blink ease-in-out 1.5s infinite;
+  }
+
+  .burger-menu{
+    width: 120px;
+    height: 120px;
+    position: relative;
+  }
+
+  
+
+  @keyframes blink {
+    100% {
+      transform: scale(2, 2);
+      opacity: 0;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {

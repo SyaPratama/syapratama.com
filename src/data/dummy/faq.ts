@@ -1,4 +1,6 @@
-export const faqData = [
+import { FaqType } from "@/types/type";
+
+export const faqData: Array<FaqType> = [
   {
     question: "How to became rich?",
     answer: "Don't gambling."

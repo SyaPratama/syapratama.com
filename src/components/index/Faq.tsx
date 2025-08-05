@@ -30,7 +30,7 @@ function Faq({ question, answer }: FaqProps) {
   return (
     <div
       ref={RefDiv}
-      className="w-full text-2xl font-normal inline-flex flex-col justify-between overflow-clip"
+      className="w-full text-lg md:text-2xl font-normal inline-flex flex-col justify-between overflow-clip"
     >
       <dt className="inline-flex cursor-custom items-center justify-between w-full text-left">
         <button className=" cursor-custom" onClick={() => setIsExpand(!isExpand)}>
@@ -38,7 +38,7 @@ function Faq({ question, answer }: FaqProps) {
         </button>
         <IoIosArrowDown className="arrow-icon" />
       </dt>
-      <dd className="text-xl">{answer}</dd>
+      <dd className="text-sm md:text-xl">{answer}</dd>
     </div>
   );
 }

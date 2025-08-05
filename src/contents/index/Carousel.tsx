@@ -3,8 +3,8 @@
 import HorizontalLoop from "@/lib/horizontalLoop";
 import gsap from "gsap";
 import { useEffect } from "react";
-import LeftCard from "./LeftCard";
-import RightCard from "./RightCard";
+import LeftCard from "../../components/index/LeftCard";
+import RightCard from "../../components/index/RightCard";
 
 function Carousel() {
   useEffect(() => {

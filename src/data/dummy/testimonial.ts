@@ -1,4 +1,6 @@
-export const testimonials = [
+import { TestimonialType } from "@/types/type";
+
+export const testimonials: Array<TestimonialType> = [
     {
         name: "Rizky",
         testimonial: "Mantap Web IoT nya! Good job banget.",

@@ -10,7 +10,7 @@ interface CardTestimonialProps {
 function CardTestimonial({ children,direction }: CardTestimonialProps) {
   return (
     <div
-      className="image cursor-custom bg-slate-400/20 p-6 border border-slate-400/30 w-70 rounded-xl h-36"
+      className="image cursor-custom bg-slate-400/20 p-6 border border-slate-400/30 w-64 md:w-70 rounded-xl h-36"
       data-direction={direction}
     >
         { children }
