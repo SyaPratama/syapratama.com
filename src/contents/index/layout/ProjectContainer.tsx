@@ -10,6 +10,8 @@ function ProjectContainer() {
           <Image
             className="absolute top-0 -z-10 w-full h-full rounded-2xl object-cover"
             src={item.img ?? ""}
+            width={5000}
+            height={5000}
             alt={item.title}
           />
           <div className="absolute w-full inset-0 rounded-2xl bg-gradient-to-t from-black/95 via-black/30 to-black/10 md:via-black/10"></div>

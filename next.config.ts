@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   /* config options here */
   crossOrigin: "anonymous",
   reactStrictMode: true,
+  images: {
+    remotePatterns: [new URL('https://i.pinimg.com/**')],
+  },
   experimental: {
     optimizePackageImports: [
       "gsap",
