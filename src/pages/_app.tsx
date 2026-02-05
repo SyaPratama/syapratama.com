@@ -21,6 +21,9 @@ function Root({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
           </Layout>
         </ThemeProvider>
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6200304491212280"
+          crossorigin="anonymous"></script>
       </body>
     </html>
   );
