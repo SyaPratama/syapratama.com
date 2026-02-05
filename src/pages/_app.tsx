@@ -12,7 +12,6 @@ function Root({ Component, pageProps }: AppProps) {
   return (
     <>
       <DefaultSeo {...seoConfig} />
-
       <ThemeProvider
         attribute="class"
         defaultTheme="system"
@@ -23,13 +22,6 @@ function Root({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </Layout>
       </ThemeProvider>
-
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6200304491212280"
-        crossOrigin="anonymous"
-        strategy="afterInteractive"
-      />
     </>
   );
 }

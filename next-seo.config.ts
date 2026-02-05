@@ -51,6 +51,12 @@ const getDefaultSeoConfig = () => ({
       name: "apple-mobile-web-app-status-bar-style",
       content: "default",
     },
+
+    // ✅ Google AdSense verification
+    {
+      name: "google-adsense-account",
+      content: "ca-pub-6200304491212280",
+    },
   ],
   additionalLinkTags: [
     {
@@ -75,10 +81,10 @@ const getDefaultSeoConfig = () => ({
       sizes: "192x192",
       href: "/favicon/android-chrome-192x192.png",
     },
-        {
+    {
       rel: "android-chrome-icon",
       sizes: "512x512",
-      href: "/favicon/android-chrome-512x512",
+      href: "/favicon/android-chrome-512x512.png", // 👈 fix ekstensi
     },
     {
       rel: "manifest",
